@@ -2,7 +2,7 @@ name: Cypress Tests
 on: [push]
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest;
+    runs-on: windows-latest;
     steps:
     - name: Checkout
       uses: actions/checkout@v4
