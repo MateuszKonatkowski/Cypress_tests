@@ -39,7 +39,7 @@ describe('Signup/Login', () => {
   })
   it('Search products', () =>
   {
-    //cy.intercept('POST','/api/searchProduct','').as('searchProduct');
+    ///cy.intercept('POST','/api/searchProduct','').as('searchProduct');
 
   })
 })
