@@ -1,6 +1,8 @@
+import MainPage from '../pages/MainPage.cy.js'
+
 describe('Signup/Login', () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('https://automationexercise.com');
   })
   it('should register user', () => {
     cy.get('.shop-menu :nth-child(4) a').should('be.visible').click();

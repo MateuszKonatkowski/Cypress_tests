@@ -1,4 +1,4 @@
-class Main {
+class MainPage {
     elements =
         {
             homeButton: () => cy.get('.shop-menu :nth-child(1) a'),
@@ -10,15 +10,14 @@ class Main {
 
     visitMain()
     {
-        cy.visit('/');
-        return new this.visitMain();
+        return cy.visit('https://automationexercise.com');
     }
     enterHomePage() {
         this.enterHomePage().homeButton().click();
     }
 
-    enterProducsPage() {
-        this.enterProducsPage().productsButton().click();
+    enterProductsPage() {
+        this.enterProductsPage().productsButton().click();
     }
 
     enterCartPage() {
