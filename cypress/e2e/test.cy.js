@@ -14,17 +14,7 @@ describe('test', () => {
 
     it('test', () => {
 
-        mainPage.addToCart("Blue Top").clickViewCartModalButton();
-        cartPage.deleteProduct('Blue Top');
-
-       cartPage.elements.emptyCartInfoElement().invoke('text')
-           .then((text) =>
-        {
-            expect(text.trim()).to.eq('Cart is empty! Click here to buy products.');
-        })
-
-
-
+        mainPage.sendSubscriptionEmail('fsf@gmail.com');
 
     })
 })

@@ -1,7 +1,6 @@
-import BasePage from "./BasePage.cy";
 
 
-class ProductsPage extends BasePage {
+class ProductsPage {
 
     elements =
     {
@@ -9,7 +8,7 @@ class ProductsPage extends BasePage {
         searchProductsButton: () => cy.get('#submit_search'),
     }
 
-    enterSearchProducts(searchProducts)
+    searchProduct(searchProducts)
     {
         this.elements.searchProductsInput().type(searchProducts);
         this.elements.searchProductsButton().click();
@@ -17,4 +16,5 @@ class ProductsPage extends BasePage {
     }
 
 }
+
 export default ProductsPage;
