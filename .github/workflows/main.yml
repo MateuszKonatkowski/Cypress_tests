@@ -12,8 +12,3 @@ jobs:
         uses: actions/checkout@v4
       - name: Cypress.io
         uses: cypress-io/github-action@v6
-        with:
-          build: npm run build
-          start: npm start
-          wait-on:
-          wait-on-timeout: 60
