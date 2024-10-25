@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import 'cypress-file-upload';
+
+Cypress.Commands.add('uploadFile', (fileName, selector) => {
+    cy.get(selector).click();
+    cy.get(selector).attachFile(`/Photos/${fileName}`);
+});
+
+Cypress.Commands.add('confirmAlert', () => {
+    cy.on('window:confirm', () => {
+        return true;
+    });
+});
