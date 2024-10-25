@@ -1,5 +1,5 @@
 
-class SignupLoginPage
+class LoginPage
 {
     elements =
         {
@@ -10,6 +10,9 @@ class SignupLoginPage
             emailSignupInputElement: () => cy.get('input[data-qa=signup-email]'),
             signupButtonElement: () => cy.get('button[data-qa=signup-button]'),
             incorrectLoginCredentialsInfoElement: () => cy.get('.login-form p'),
+            loginFormTextElement: () => cy.get('.login-form h2'),
+            signupFormTextElement: () => cy.get('.signup-form h2'),
+            signupFormErrorMessageElement: () => cy.get('.signup-form p'),
         }
 
     login(email, password)
@@ -28,3 +31,4 @@ class SignupLoginPage
         return this;
     }
 }
+export default LoginPage;
